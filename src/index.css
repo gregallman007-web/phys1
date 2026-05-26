@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Teko", sans-serif;
+  --font-subtitle: "Manrope", sans-serif;
+
+  --color-brand-bg: #F7FAFA;
+  --color-brand-charcoal: #16191B;
+  --color-brand-slate: #48545C;
+  --color-brand-teal: #2FAEAA;
+  --color-brand-teal-light: #D8ECEB;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-charcoal);
+    font-family: var(--font-sans);
+  }
+
+  /* Optimize Teko character tracking for display styles */
+  .font-display {
+    letter-spacing: 0.04em;
+    line-height: 0.9;
+  }
+}
+
+/* Accent dividers and indicators with Teal Band Momentum palettes */
+.teal-gradient-lr {
+  background: linear-gradient(90deg, #2FAEAA 0%, rgba(47, 174, 170, 0.4) 100%);
+}
+
+.teal-gradient-dark {
+  background: linear-gradient(135deg, rgba(22, 25, 27, 0.98) 0%, rgba(47, 174, 170, 0.25) 100%);
+}
+
+/* Custom rounded card styling */
+.editorial-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(22, 25, 27, 0.04), 0 2px 8px -1px rgba(22, 25, 27, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editorial-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -4px rgba(22, 25, 27, 0.08), 0 4px 12px -2px rgba(22, 25, 27, 0.04);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FAFA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8ECEB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2FAEAA;
+}
